@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>textoo</title>
+  <title>alexx</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-dark: #1a1a1a; /* Ahora usado para el fondo principal */
       --text-light: #f0f0f0; /* Blanco para texto principal */
       --card-bg-start: rgba(42, 42, 42, 0.7); /* Nuevo color para gradiente de la tarjeta con transparencia */
-      --card-bg-end: rgba(58, 58, 58, 0.7);   /* Nuevo color para gradiente de la tarjeta con transparencia */
+      --card-bg-end: rgba(58, 58, 58, 0.7);    /* Nuevo color para gradiente de la tarjeta con transparencia */
       --accent-color: #00bcd4; /* Cian/Turquesa para acentos, cambié de nuevo para contrastar con el negro */
       --border-color: #444;
       --shadow-color: rgba(0, 0, 0, 0.4);
@@ -39,8 +39,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      /* Imagen de la bandera del Real Madrid */
-      background-image: url('https://cdn.discordapp.com/attachments/1382098255768322182/1395226486998433912/football-2311841_1280.webp?ex=6879ad6c&is=68785bec&hm=56a27187af1310d186127d2174db2cbd66036f2954e767de2e55669e53159195&'); /* URL de la bandera del Real Madrid */
+      /* Imagen de la bandera del Real Madrid - Usando un placeholder ya que la URL original no es directa */
+      background-image: url('https://placehold.co/1200x800/0000FF/FFFFFF?text=Real+Madrid+Flag'); /* Placeholder azul y blanco */
       background-size: 120% 120%; /* Más grande para permitir el paneo */
       background-position: 0% 0%; /* Posición inicial */
       animation: gradientAnimation 20s ease infinite; /* Animación de paneo */
@@ -68,7 +68,7 @@
       }
     }
 
-    /* Contenedor para las fotos flotantes */
+    /* Contenedor para las fotos flotantes (ahora no se usa en el HTML, pero el estilo se mantiene por si se añade de nuevo) */
     .floating-items-container {
       position: absolute;
       top: 0;
@@ -136,7 +136,7 @@
     }
     .info-box p {
       margin: 0;
-      font-size: 3rem;
+      font-size: 1.2rem; /* Ajustado para mejor legibilidad */
       line-height: 1.5;
     }
 
@@ -178,55 +178,10 @@
       box-shadow: 0 8px 20px var(--shadow-color);
     }
 
+    /* Las flechas de navegación se han eliminado del HTML */
     .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 0; 
+      font-size: 0; /* Ocultar el texto del emoji */
       color: transparent; /* Ocultar el texto del emoji */
-      cursor: pointer;
-      user-select: none;
-      transition: all 0.3s ease; /* Transición para todas las propiedades */
-      padding: 15px; /* Aumentar el padding para un área de clic más grande */
-      z-index: 10;
-      opacity: 0.8;
-      background-color: rgba(42, 42, 42, 0.5); /* Fondo semitransparente */
-      border-radius: 50%; /* Fondo circular */
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
-      backdrop-filter: blur(5px); /* Efecto de cristal esmerilado */
-      -webkit-backdrop-filter: blur(5px); /* For Safari */
-      
-      /* Centrar el SVG dentro del div de la flecha */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .arrow svg {
-      width: 40px; /* Tamaño del icono SVG */
-      height: 40px; /* Tamaño del icono SVG */
-      fill: var(--text-light); /* Color del icono SVG por defecto */
-      transition: fill 0.2s ease, transform 0.2s ease;
-    }
-
-    .arrow:hover {
-      opacity: 1;
-      transform: translateY(-50%) scale(1.1);
-      background-color: rgba(0, 188, 212, 0.2); /* Tinte de color de acento (cian) en hover */
-      box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4); /* Efecto de brillo en hover */
-    }
-
-    .arrow:hover svg {
-      fill: var(--accent-color); /* Cambiar el color del SVG a acento (cian) en hover */
-      transform: scale(1.1); /* Escala el SVG un poco más en hover */
-    }
-
-    #leftArrow {
-      left: 20px;
-    }
-
-    #rightArrow {
-      right: 20px;
     }
 
     /* Media Queries for Responsiveness */
@@ -249,19 +204,6 @@
       }
       img {
         max-height: 55vh;
-      }
-      .arrow {
-        padding: 10px;
-      }
-      .arrow svg {
-        width: 30px;
-        height: 30px;
-      }
-      #leftArrow {
-        left: 10px;
-      }
-      #rightArrow {
-        right: 10px;
       }
       .floating-item {
         width: 60px;
@@ -290,13 +232,6 @@
       img {
         max-height: 45vh;
       }
-      .arrow {
-        padding: 8px;
-      }
-      .arrow svg {
-        width: 25px;
-        height: 25px;
-      }
       .floating-item {
         width: 50px;
         height: 50px;
@@ -306,99 +241,26 @@
 </head>
 <body>
   <div class="animated-background"></div>
-  <div class="floating-items-container"></div>
+  <!-- El contenedor de elementos flotantes se ha eliminado ya que no se usará -->
 
   <div class="info-box">
-    <p>textoo</p>
+    <p>alexx</p>
   </div>
   <div class="gallery-container">
-    <div class="arrow" id="leftArrow">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
-    </div>
-    <img id="primoFoto" src="https://cdn.discordapp.com/attachments/1382098255768322182/1395219732482752543/image.png?ex=6879a722&is=687855a2&hm=2ad2168e6c146abb805047148dab5e47f12dfb12f3b8693192a15cea28440239&" alt="Foto de mi primo vacilón">
-    <div class="arrow" id="rightArrow">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
-    </div>
+    <!-- Las flechas de navegación se han eliminado -->
+    <img id="primoFoto" src="1.png" alt="Foto de mi primo vacilón">
+    <!-- Las flechas de navegación se han eliminado -->
   </div>
 
   <script>
     const img = document.getElementById('primoFoto');
-    const images = [
-      'https://cdn.discordapp.com/attachments/1382098255768322182/1395220355596947456/WhatsApp_Image_2025-07-13_at_22.59.54.jpeg?ex=6879a7b6&is=68785636&hm=7b60095fe10a2e46fdb934aeb24af13b3a0ea75a11959283a1095e502c40663d&',
-      'https://cdn.discordapp.com/attachments/1382098255768322182/1395220356176023552/WhatsApp_Image_2025-07-13_at_22.59.55.jpeg?ex=6879a7b6&is=68785636&hm=96d160b10222750523131570d7b7c6c8409dad96291ca2b30883cb357c6dcbfa&',
-      'https://cdn.discordapp.com/attachments/1382098255768322182/1395220356419027034/WhatsApp_Image_2025-07-13_at_22.59.54_1.jpeg?ex=6879a7b6&is=68785636&hm=f2b8ade41f00d57753e4b72045f988a9461bd933c29b09991bab5a6e9a302e87&',
-      'https://cdn.discordapp.com/attachments/1382098255768322182/1395219732482752543/image.png?ex=6879a722&is=687855a2&hm=2ad2168e6c146abb805047148dab5e47f12dfb12f3b8693192a15cea28440239&'
-    ];
-    let currentIndex = 0;
-
-    // Preload images to prevent flickering
-    images.forEach(src => {
-        const img = new Image();
-        img.src = src;
-    });
 
     img.addEventListener('click', () => {
       img.classList.toggle('zoom');
     });
 
-    function navigate(direction) {
-      // If the image is zoomed, unzoom it before changing the image
-      if (img.classList.contains('zoom')) {
-        img.classList.remove('zoom');
-        // Give a brief moment for the unzoom animation to complete
-        setTimeout(() => updateImage(direction), 300);
-      } else {
-        updateImage(direction);
-      }
-    }
-
-    function updateImage(direction) {
-      if (direction === 'left') {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-      } else { // 'right'
-        currentIndex = (currentIndex + 1) % images.length;
-      }
-      img.src = images[currentIndex];
-    }
-
-    document.getElementById('leftArrow').addEventListener('click', () => navigate('left'));
-    document.getElementById('rightArrow').addEventListener('click', () => navigate('right'));
-
-    // --- Floating photos animation ---
-    const floatingItemsContainer = document.querySelector('.floating-items-container');
-
-    function createFloatingItem() {
-      const item = document.createElement('img');
-      item.classList.add('floating-item');
-      
-      const randomIndex = Math.floor(Math.random() * images.length);
-      item.src = images[randomIndex];
-      item.alt = "Floating image of primo";
-
-      // Manejar errores de carga de imagen
-      item.onerror = () => {
-        console.error("Error al cargar la imagen flotante:", item.src);
-        // Reemplazar con una imagen de marcador de posición si falla la carga
-        item.src = 'https://placehold.co/80x80/2a2a2a/f0f0f0?text=Error'; // Placeholder gris oscuro con texto claro
-        item.alt = "Error loading image"; // Actualizar texto alternativo
-      };
-
-      const startX = Math.random() * 100;
-      item.style.left = `${startX}vw`;
-
-      item.style.animationDelay = `${Math.random() * 5}s`;
-
-      const randomXOffset = (Math.random() - 0.5) * 40;
-      item.style.setProperty('--random-x', `${randomXOffset}vw`);
-
-      floatingItemsContainer.appendChild(item);
-
-      item.addEventListener('animationend', () => {
-        item.remove();
-      });
-    }
-
-    setInterval(createFloatingItem, 1000);
+    // Se ha eliminado toda la lógica de la galería (const images, currentIndex, navigate, updateImage)
+    // Se ha eliminado toda la lógica de las fotos flotantes (floatingItemsContainer, createFloatingItem, setInterval)
   </script>
 </body>
 </html>
